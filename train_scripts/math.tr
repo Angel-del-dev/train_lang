@@ -1,0 +1,31 @@
+_ main := ({
+
+    numeric one = 10;
+    numeric two = 2;
+
+    numeric add = +(one, two);
+    numeric subt = -(one, two);
+    numeric div = /(one, two);
+    numeric mult = *(one, two);
+    numeric pow = ^(one, two);
+    numeric sqroot = 2/(one);
+    numeric fact = !(one);
+
+    pl('Addition');
+    pl(add);
+
+    pl('Subtract');
+    pl(subt);
+
+    pl('Multiplication');
+    pl(mult);
+
+    pl('Power of');
+    pl(pow);
+
+    pl('Square root');
+    pl(sqroot);
+
+    pl('Factorial');
+    pl(fact);
+});

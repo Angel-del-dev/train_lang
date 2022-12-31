@@ -1,0 +1,4 @@
+_ main := ({
+    string helloWorld = 'Hello World!';
+    pl(helloWorld);
+});

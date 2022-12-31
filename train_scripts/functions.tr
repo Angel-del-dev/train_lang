@@ -1,0 +1,14 @@
+bye all := ({
+    string bye = 'Bye world!';
+    pl(bye);
+});
+
+greet all := ({
+    string hello = 'Hello world';
+    pl(hello);
+    bye();
+});
+
+_ main := ({
+    greet();
+});
