@@ -4,6 +4,7 @@ interpreted = {
     "file_array" : '',
     "variables": {},
     "functions": {},
+    "current_main_function_name": ''
 }
 
 lib = {
@@ -20,6 +21,7 @@ def lexer(str, fname):
     for k in lib:
         if k in str:
             assigned, interpreted = lib[k](str, interpreted, fname)
+
             break
 
 def func_lexer(str):
@@ -51,16 +53,12 @@ def format_content_in_fn(fn_dict, fname):
     type = fn_dict['type']
     content = fn_dict['content']
     ending = fn_dict['result']
-    if ending == True:
-        # The function has been called at least once, so we don't need to format it again
-        pass
-    else:
-        content_split = content.split(';')
-        for s in content_split:
-            if(s != ''):
-                lexer(s, fname)
+    content_split = content.split(';')
+    for s in content_split:
+        if(s != ''):
+            lexer(s, fname)
 
-        del interpreted['functions'][fname]['variables']
+    del interpreted['functions'][fname]['variables']
 
 def load(content):
     splitFn = splitInitialContent(content)

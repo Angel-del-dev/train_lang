@@ -4,7 +4,9 @@ import math
 def math_add(args):
     if u.check_amount_params(args, 2, '+()') is False:
         return ''
+
     total = float(args[0]) + float(args[1])
+
     return total
 
 def math_subt(args):

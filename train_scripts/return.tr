@@ -1,0 +1,13 @@
+fn_return_addition all := ({
+    numeric first_num = 1;
+    numeric second_num = 10;
+
+    numeric addition = +(first_num, second_num);
+    return(addition);
+});
+
+
+_ main := ({
+    numeric return_addition = fn_return_addition();
+    pl(return_addition);
+});

@@ -3,7 +3,7 @@ _ main := ({
     string str2 = 'World!';
     string delimiter = ', ';
 
-    string str_concated = concat(delimiter, str1, str2);
+    string str_concated = concat(delimiter, str, str2);
 
     pl(str_concated);
 });

@@ -1,14 +1,20 @@
-bye all := ({
-    string bye = 'Bye world!';
-    pl(bye);
+retNum all := ({
+    numeric one = 1;
+    pl(one);
 });
 
-greet all := ({
-    string hello = 'Hello world';
-    pl(hello);
-    bye();
+retNum2 all := ({
+    numeric two = 2.4;
+    pl(two);
 });
 
 _ main := ({
-    greet();
+    retNum();
+    retNum2();
+    numeric sum = +(1, 2.4);
+    string delimiter = ", ";
+    string concat = concat(delimiter, 'test', 'test2');
+    
+    pl(sum);
+    pl(concat);
 });
